@@ -1,0 +1,183 @@
+@import '@styles/variables/all.scss';
+
+.nav {
+  width: 100vw;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px 2px 2px rgba(0,0,0,.1);
+
+  .nav__container {
+    width: 100%;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .nav__brand,
+    .nav__link,
+    .menu__link {
+      color: map-get($colors, dark);
+      font-family: $poppins;
+      font-weight: map-get($weight, medium);
+      font-size: 2rem;
+      line-height: calc(2rem * 1.5);
+      letter-spacing: $letter-spacing;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .nav__brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+    }
+
+    .nav__inner {  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+
+      svg {
+        padding: 0 .5rem;
+        height: calc(1.5rem * 1.5);
+        line-height: calc(1.5rem * 1.5);
+        transition: transform 0.6s;
+        color: map-get($colors, dark);
+        z-index: 1;
+      }
+
+      &:hover svg {
+        transform: rotate(180deg);
+        transition: transform 0.6s;
+      }
+
+      &:hover .inner .inner__link {
+        transform: translateY(-100%);
+      }
+
+      .inner {
+        display: inline-flex;
+        overflow: hidden;
+        flex-direction: column;
+        height: calc(1.5rem * 1.5);
+        line-height: calc(1.5rem * 1.5);
+        position: relative;
+        z-index: 1;
+
+        .inner__link {
+          transform: translateY(0);
+          transition: transform 0.6s;
+
+          .nav__link {
+            font-size: 1.5rem;
+            line-height: calc(1.5rem * 1.5);
+          }
+        }
+      }
+    }
+
+    .nav__menu {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style-type: none;
+      list-style: none;
+      animation: 1s moveToBottom forwards;
+
+      .menu__item {
+        padding: 0 1rem;
+
+        .menu__link {
+          font-size: 1.5rem;
+          line-height: calc(1.5rem * 1.5);
+        }
+      }
+    }
+
+    .nav__dropdown {
+      width: 100%;
+      height: 60%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      transform: translateY(-110%);
+      transition: transform 0.6s;
+      background-color: map-get($colors, blue);
+
+      .nav__list {
+        padding: 4rem 0 4rem 48.3rem;
+        width: 100%;
+
+        .list__item {
+          list-style: none;
+          list-style-type: none;
+
+          .list__link {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-start;
+            color: map-get($colors, dark);
+            font-family: $poppins;
+            font-weight: map-get($weight, regular);
+            letter-spacing: $letter-spacing;
+            text-decoration: none;
+            cursor: pointer;
+
+            .nav__inner {  
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+        
+              svg {
+                padding: 0 .5rem;
+                height: calc(3rem * 1.5);
+                line-height: calc(3rem * 1.5);
+                transition: transform 0.6s;
+                color: map-get($colors, light);
+                z-index: 1;
+              }
+        
+              &:hover svg {
+                transform: translateX(1rem);
+                transition: transform 0.6s;
+              }
+        
+              &:hover .inner .inner__link {
+                transform: translateY(-100%);
+              }
+        
+              .inner {
+                display: inline-flex;
+                overflow: hidden;
+                flex-direction: column;
+                height: calc(3rem * 1.5);
+                line-height: calc(3rem * 1.5);
+                position: relative;
+                z-index: 1;
+        
+                .inner__link {
+                  transform: translateY(0);
+                  transition: transform 0.6s;
+        
+                  .nav__link {
+                    font-size: 3rem;
+                    line-height: calc(3rem * 1.5);
+                    color: map-get($colors, light);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,96 @@
+@import '@styles/variables/all';
+
+.container {
+  padding: 0 2rem;
+
+  .container__horizontalLine {
+    margin: 2.5rem 0 5rem;
+    width: 100%;
+    height: .2rem;
+    background-color: map-get($colors, darkLight);
+    border-radius: .2rem;
+  }
+
+  .container__header,
+  .container__subheader {
+    margin: 8rem 0 0;
+    color: map-get($colors, dark);
+    font-family: $poppins;
+    font-weight: map-get($weight, medium);
+    letter-spacing: $letter-spacing;
+    text-decoration: none;
+    font-size: 4rem;
+    line-height: calc(4rem * 1.5);
+    text-transform: capitalize;
+  }
+
+  .container__subheader {
+    margin: 4rem 0 16rem;
+    font-size: 2.5rem;
+    line-height: calc(2.5rem * 1.5);
+  }
+
+  .wrapper {
+    width: 100%;
+    height: 234vh;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      '. .'
+      '. .';
+
+    .card {
+      width: 100%;
+      height: 75vh;
+      display: flex;
+      align-items: flex-end;
+      background-size: 150%;
+      background-position: center;
+      transition: 1s background-size;
+
+      &:hover {
+        background-size: 170%;
+      }
+
+      &:first-child {
+        background-image: url('@assets/images/stockdate/stock01.png');
+      }
+
+      &:nth-child(2) {
+        background-image: url('@assets/images/stockdate/stock02.png');
+      }
+
+      &:nth-child(3) {
+        background-image: url('@assets/images/stockdate/stock03.png');
+      }
+
+      &:nth-child(4) {
+        background-image: url('@assets/images/stockdate/stock04.png');
+      }
+
+      &:nth-child(5) {
+        background-image: url('@assets/images/stockdate/stock05.png');
+      }
+
+      &:nth-child(6) {
+        background-image: url('@assets/images/stockdate/stock06.png');
+      }
+
+      .card__details {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: map-get($colors, dark);
+        background-color: map-get($colors, light);
+
+        .card__header,
+        .card__description {
+          font-size: 1.5rem;
+          line-height: calc(1.5rem * 1.5);
+        }
+      }
+    }
+  }
+}

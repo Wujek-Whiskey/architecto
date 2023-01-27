@@ -1,0 +1,89 @@
+@import '@styles/variables/all';
+
+.wrapper {
+  width: 100%;
+  height: 187vh;
+  padding: 0 2rem;
+  margin: 0 0 20rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  .wrapper__content {
+    color: map-get($colors, dark);
+    font-family: $poppins;
+    font-weight: map-get($weight, medium);
+    letter-spacing: $letter-spacing;
+    text-decoration: none;
+
+    .content__header {
+      font-size: 4rem;
+      line-height: calc(4rem * 1.5);
+      text-transform: capitalize;
+    }
+
+    .content__text {
+      margin: 12rem 0;
+      width: 48rem;
+      font-size: 2rem;
+      line-height: calc(2rem * 1.5);
+      text-align: justify;
+    }
+  }
+
+  .wrapper__images {
+    width: 50%;
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(2, auto);
+    grid-template-areas:
+      '. .'
+      '. .'
+      '. .';
+
+    .content__image {
+      border-radius: 25% 0 25% 0;
+      width: 100%;
+      height: 60vh;
+      display: flex;
+      align-items: flex-end;
+      background-size: cover;
+      background-position: center;
+
+      &:first-child {
+        background-image: url('@assets/images/agency/people01_1.png');
+        &:hover {
+          background-image: url('@assets/images/agency/people01_2.png');
+        }
+      }
+
+      &:nth-child(2) {
+        background-image: url('@assets/images/agency/people02_1.png');
+        &:hover {
+          background-image: url('@assets/images/agency/people02_2.png');
+        }
+      }
+
+      &:nth-child(3) {
+        background-image: url('@assets/images/agency/people03_1.png');
+        &:hover {
+          background-image: url('@assets/images/agency/people03_2.png');
+        }
+      }
+
+      &:nth-child(4) {
+        background-image: url('@assets/images/agency/people04_1.png');
+        &:hover {
+          background-image: url('@assets/images/agency/people04_2.png');
+        }
+      }
+
+      &:nth-child(5) {
+        background-image: url('@assets/images/agency/people05_1.png');
+        &:hover {
+          background-image: url('@assets/images/agency/people05_2.png');
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$poppins: 'Poppins', sans-serif;
+
+$base-font-size: .975rem;
+// $sm-font-size: calc($base-font-size * 0.75);
+// $lg-font-size: calc($base-font-size * 1.5);
+// $xl-font-size: calc($base-font-size * 2);
+// $xxl-font-size: calc($base-font-size * 4);
+
+$line-height: (
+  base: calc($base-font-size * 1.5),
+  // sm: calc($sm-font-size * 1.5),
+  // lg: calc($lg-font-size * 1.5),
+  // xl: calc($xl-font-size * 1.5),
+  // xxl: calc($xxl-font-size * 1.5)
+);
+
+$weight: (
+  light: 300,
+  regular: 400,
+  medium: 500,
+  semibold: 600,
+  bold: 700,
+);
+
+$letter-spacing: 0.03rem;

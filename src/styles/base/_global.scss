@@ -1,0 +1,14 @@
+@import '../variables/all';
+
+html, body {
+  -webkit-background-color: map-get($colors, light);
+  background-color: map-get($colors, light);
+  color: map-get($colors, dark);
+  letter-spacing: $letter-spacing;
+  font-family: $poppins;
+}
+
+::selection {
+  color: map-get($colors, darkLight);
+  background-color: map-get($colors, dark);
+}

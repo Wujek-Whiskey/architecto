@@ -1,0 +1,94 @@
+@import '@styles/variables/all.scss';
+
+.header {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    margin: 14rem 0 0;
+    width: 100%;
+    height: 90vh;
+    padding: 2rem;
+    
+    .container__content {
+      color: map-get($colors, dark);
+      font-family: $poppins;
+      font-weight: map-get($weight, medium);
+      letter-spacing: $letter-spacing;
+      text-decoration: none;
+      
+      .container__header {
+        font-size: 4rem;
+        line-height: calc(4rem * 1.5);
+        text-transform: capitalize;
+      }
+
+      .container__horizontalLine {
+        margin: 2.5rem 0 5rem;
+        width: 100%;
+        height: .2rem;
+        background-color: map-get($colors, darkLight);
+        border-radius: .2rem;
+      }
+
+      .container__text {
+        font-size: 2.5rem;
+        line-height: calc(2.5rem * 1.5);
+        text-transform: lowercase;
+      }
+
+      .container__footer {
+        margin: 8rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .container__description {
+          font-size: 1.5rem;
+          line-height: calc(1.5rem * 1.5);
+          font-weight: map-get($weight, medium);
+        }
+
+        .container__hideText {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .container__hide {
+            font-size: 1.25rem;
+            line-height: calc(1.25rem * 1.5);
+            padding: 1rem;
+            display: none;
+            border-radius: 2rem;
+            color: map-get($colors, light);
+            background-color: map-get($colors, dark);
+            transform: translateX(-10%);
+            transition: 1s display linear;
+          }
+
+          &:hover .container__hide {
+            display: block;
+          }
+
+          .container__btn {
+            width: 4rem;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 100%;
+            color: map-get($colors, light);
+            background-color: map-get($colors, dark);
+            cursor: pointer;
+            transition: 1s transform;
+            transform: scale(0.9);
+  
+            &:hover {
+              transform: scale(1.1) rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
+}
